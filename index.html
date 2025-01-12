@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komand_Project_3s</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="modal modal--welcome">
+        <div class="modal__content">
+            <button class="modal__close-btn close-welcome">&times;</button>
+            <p class="modal__text modal__text--greeting">
+                Привіт!<br>Ви потрапили на сайт інтерактивних ігор та завдань<br>
+                Сподіваємось, що вам сподобається і ви отримаєте позитивні емоції!<br>
+                Бажаємо Вам гарно провести час!
+            </p>
+            <form class="modal__form" id="name-form">
+                <label class="modal__label" for="name-input">Введіть своє ім’я:</label>
+                <input class="modal__input" type="text" id="name-input" placeholder="Ваше ім’я..." required>
+                <button class="modal__submit-btn" id="inputButton" type="submit">Зберегти</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal modal--thankyou modal--hidden">
+        <div class="modal__content">
+            <button class="modal__close-btn close-thankyou">&times;</button>
+            <p class="modal__text modal__text--thankyou">Дякую за підписку!</p>
+        </div>
+    </div>
+    <header>
+        <div class="header__container">
+            <div class="header__container--div">
+                <img src="./img/logo.svg" alt="logo">
+                <div class="header__container--div--container">
+                    <select class="header__container--div--container--select" name="size">
+                        <option class="header__container--div--container--select--option" value="num">Числовий</option>
+                        <option class="header__container--div--container--select--option" value="game">Ігровий</option>
+                        <option class="header__container--div--container--select--option" value="see" selected>Ознайомчий</option>
+                      </select>
+                    <a class="header__container--div--container--a" href="#">Наша команда</a>
+                    <a class="header__container--div--container--a" href="#">Контакти</a>
+                </div>
+            </div>
+                <div class="header__daynight--container">
+                    <img src="./img/daynight.svg" alt="daynight">
+                    <p id="inputText">Вітаємо, User</p>
+                </div>
+        </div>
+    </header>
+    <script src="./script.js"></script>
+</body>
+</html>
