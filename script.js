@@ -140,3 +140,15 @@ const footerButton = document.getElementById('footerButton');
 footerButton.addEventListener('click', () => {
   footerInput.value = 'Успішно!';
 })
+function updateMaxNumber() {
+const input11 = parseFloat(document.getElementById('num11').value) || 0;
+const input22 = parseFloat(document.getElementById('num22').value) || 0;
+const input33 = parseFloat(document.getElementById('num33').value) || 0;
+
+const maxNumber = Math.max(input11, input22, input33);
+
+document.getElementById('result3').textContent = `Найбільше число, яке ви ввели - ${maxNumber}`;
+}
+document.addEventListener('input', updateMaxNumber)
+document.addEventListener('input', updateMaxNumber)
+document.addEventListener('input', updateMaxNumber)
