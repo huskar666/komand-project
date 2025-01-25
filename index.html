@@ -53,22 +53,25 @@
             <h1 class="main__container--h1">Популярні інтерактивні ігри</h1>
             <hr>
             <div class= "main__container--div1">
-                <h3 class="main__container--div1--h3">Перевір в який рік ти народився </h3>
+                <h3 class="main__container--div1--h3" id="title">Перевір в який рік ти народився </h3>
                 <div class="main__container--div1--container">
+                    <div class="main__container--div1--container--2">
                         <input class="main__container--div1--container--search" id="yearInput" type="text" placeholder="Введіть рік народження" />
-                            <div class="main__container--div1--container--button">
-                                <svg class="main__container--div1--container--button--svg" id="searchIcon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="6.52174" cy="6.52174" r="5.52174" stroke="white" stroke-width="2"/>
-                                    <path d="M14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L14.2929 15.7071ZM11.468 10.0538L10.7609 9.34665L9.34666 10.7609L10.0538 11.468L11.468 10.0538ZM15.7071 14.2929L11.468 10.0538L10.0538 11.468L14.2929 15.7071L15.7071 14.2929Z" fill="white"/>
-                                    </svg>
-                            </div>
+                        <div class="main__container--div1--container--button">
+                            <svg class="main__container--div1--container--button--svg" id="searchIcon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="6.52174" cy="6.52174" r="5.52174" stroke="white" stroke-width="2"/>
+                                <path d="M14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L14.2929 15.7071ZM11.468 10.0538L10.7609 9.34665L9.34666 10.7609L10.0538 11.468L11.468 10.0538ZM15.7071 14.2929L11.468 10.0538L10.0538 11.468L14.2929 15.7071L15.7071 14.2929Z" fill="white"/>
+                                </svg>
+                        </div>
+                    </div>
                         <div id="result"></div>
                 </div>
             </div>
             <hr>
             <div class= "main__container--div2">
-                <h3 class="main__container--div2--h3">Вгадай число, яке загадав комп’ютер</h3>
+                <h3 class="main__container--div2--h3" id="title">Вгадай число, яке загадав комп’ютер</h3>
                 <div class="main__container--div2--container">
+                    <div class="main__container--div2--container--2">
                         <input class="main__container--div2--container--search" id="numberInput" type="text" placeholder="Введіть число" />
                         <div class="main__container--div2--container--button">
                         <svg class="main__container--div2--container--button--svg" id="searchIcon2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,12 +79,13 @@
                             <path d="M14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L14.2929 15.7071ZM11.468 10.0538L10.7609 9.34665L9.34666 10.7609L10.0538 11.468L11.468 10.0538ZM15.7071 14.2929L11.468 10.0538L10.0538 11.468L14.2929 15.7071L15.7071 14.2929Z" fill="white"/>
                             </svg>
                         </div>
+                    </div>
                         <div id="result1"></div>
                 </div>
             </div>
             <hr>
             <div class="main__container--div3">
-                <h3 class="main__container--div3--h3">Калькулятор</h3>
+                <h3 class="main__container--div3--h3" id="title">Калькулятор</h3>
                 <div class="main__container--div3--container">
                     <input class="main__container--div3--container--search" id="num1" type="text" placeholder="Введіть число" />
                     <div class="main__container--div3--container--div">
@@ -101,14 +105,16 @@
             </div>
             <hr>
             <div class="main__container--div4">
-                <h3 class="main__container--div4--h3">Калькулятор часу</h3>
+                <h3 class="main__container--div4--h3" id="title">Калькулятор часу</h3>
                 <div class="main__container--div4--container">
-                    <input class="main__container--div4--container--search" id="time-input" type="text" placeholder="Введіть число" />
-                    <div class="main__container--div4--container--button">
-                    <svg class="main__container--div4--container--button--svg" id="calculate-btn" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="6.52174" cy="6.52174" r="5.52174" stroke="white" stroke-width="2"/>
-                        <path d="M14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L14.2929 15.7071ZM11.468 10.0538L10.7609 9.34665L9.34666 10.7609L10.0538 11.468L11.468 10.0538ZM15.7071 14.2929L11.468 10.0538L10.0538 11.468L14.2929 15.7071L15.7071 14.2929Z" fill="white"/>
-                        </svg>
+                    <div class="main__container--div2--container--4">
+                        <input class="main__container--div4--container--search" id="time-input" type="text" placeholder="Введіть число" />
+                        <div class="main__container--div4--container--button">
+                        <svg class="main__container--div4--container--button--svg" id="calculate-btn" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="6.52174" cy="6.52174" r="5.52174" stroke="white" stroke-width="2"/>
+                            <path d="M14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L14.2929 15.7071ZM11.468 10.0538L10.7609 9.34665L9.34666 10.7609L10.0538 11.468L11.468 10.0538ZM15.7071 14.2929L11.468 10.0538L10.0538 11.468L14.2929 15.7071L15.7071 14.2929Z" fill="white"/>
+                            </svg>
+                        </div>
                     </div>
                     <hr id="hr2" style="border: none; border-top: 1px dashed #000;"/>
                     <div id="time-difference"></div>
@@ -116,7 +122,7 @@
             </div>
             <hr>
             <div class="main__container--div5">
-                <h3 class="main__container--div5--h3">Введіть 3 числа</h3>
+                <h3 class="main__container--div5--h3" id="title1">Введіть 3 числа</h3>
                 <div class="main__container--div5--container">
                     <input class="main__container--div5--container--search" id="num11" type="text" placeholder="Введіть число" />
                     <input class="main__container--div5--container--search" id="num22" type="text" placeholder="Введіть число" />
