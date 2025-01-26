@@ -31,7 +31,7 @@
     <header>
         <div class="header__container">
             <div class="header__container--div">
-                <img src="./img/logo.svg" alt="logo">
+                <img id="logo" src="./img/logo.svg" alt="logo">
                 <div class="header__container--div--container">
                     <select class="header__container--div--container--select" name="size">
                         <option class="header__container--div--container--select--option" value="num">Числовий</option>
@@ -84,6 +84,22 @@
                 </div>
             </div>
             <hr>
+
+  <div class="game-container">
+    <div class= "main__container--div6">
+        <h3 class="main__container--div6--h3" id="title">Камінь - ножиці - папір</h3>
+    <div class="choices">
+      <button class="choice-button" data-choice="rock"><img src="" alt="12"></button>
+      <button class="choice-button" data-choice="scissors"><img src="" alt="13"></button>
+      <button class="choice-button" data-choice="paper"><img src="" alt="14"></button>
+    </div>
+
+    <button class="choice-button" id="computer-choice">Варіант комп'ютера</button>
+    </div>
+    <p class="score" id="score">Рахунок: Комп'ютер - 0, Ви - 0</p>
+  </div>
+
+  <hr>
             <div class="main__container--div3">
                 <h3 class="main__container--div3--h3" id="title">Калькулятор</h3>
                 <div class="main__container--div3--container">
@@ -137,7 +153,7 @@
     <footer>
        <section class="footer__section">
         <div class="footer__section--1">      
-            <img src="./img/header-logo.svg" alt="header-logo">
+            <img id="logo" src="./img/header-logo.svg" alt="header-logo">
         </div>
         <div class="footer__section--2">
             <p class="footer__section--2--text">Тел: +38 (123) 456 78 90

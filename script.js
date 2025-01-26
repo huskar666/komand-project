@@ -152,3 +152,80 @@ document.getElementById('result3').textContent = `Найбільше число,
 document.addEventListener('input', updateMaxNumber)
 document.addEventListener('input', updateMaxNumber)
 document.addEventListener('input', updateMaxNumber)
+
+const dayNightContainer = document.querySelector(".header__daynight--container img");
+const body = document.body;
+
+const dayIcon = "./img/daynight.svg"; 
+const nightIcon = "./img/nightmode.svg"; 
+
+dayNightContainer.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    dayNightContainer.src = body.classList.contains("dark-mode") ? nightIcon : dayIcon;
+});
+const choices = ["rock", "scissors", "paper"];
+    const resultElement = document.getElementById("result");
+    const scoreElement = document.getElementById("score");
+    const computerButton = document.getElementById("computer-choice");
+
+    let playerScore = 0;
+    let computerScore = 0;
+    let playerChoice = null;
+
+    document.querySelectorAll(".choice-button[data-choice]").forEach(button => {
+      button.addEventListener("click", () => {
+        playerChoice = button.dataset.choice;
+        resultElement.textContent = `Ви обрали: ${translateChoice(playerChoice)}.`;
+      });
+    });
+
+    computerButton.addEventListener("click", () => {
+      if (!playerChoice) {
+        resultElement.textContent = "Спочатку зробіть свій вибір!";
+        return;
+      }
+
+      const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+      const result = getResult(playerChoice, computerChoice);
+
+      if (result === "win") {
+        playerScore++;
+        resultElement.textContent = `Ви виграли раунд! Комп'ютер обрав ${translateChoice(computerChoice)}.`;
+        resultElement.className = "result win";
+      } else if (result === "lose") {
+        computerScore++;
+        resultElement.textContent = `Ви програли раунд. Комп'ютер обрав ${translateChoice(computerChoice)}.`;
+        resultElement.className = "result lose";
+      } else {
+        resultElement.textContent = `Нічия! Комп'ютер також обрав ${translateChoice(computerChoice)}.`;
+        resultElement.className = "result";
+      }
+
+      updateScore();
+    });
+
+    function getResult(player, computer) {
+      if (player === computer) return "draw";
+      if (
+        (player === "rock" && computer === "scissors") ||
+        (player === "scissors" && computer === "paper") ||
+        (player === "paper" && computer === "rock")
+      ) {
+        return "win";
+      }
+      return "lose";
+    }
+
+    function translateChoice(choice) {
+      switch (choice) {
+        case "rock": return "Камінь";
+        case "scissors": return "Ножиці";
+        case "paper": return "Папір";
+        default: return "";
+      }
+    }
+
+    function updateScore() {
+      scoreElement.textContent = `Рахунок: Комп'ютер - ${computerScore}, Ви - ${playerScore}`;
+    }
