@@ -700,6 +700,22 @@ footer .footer__section .footer__section--3 .footer__section--3--container--text
   #title1 {
     margin-bottom: 6px;
   }
+  .main__container--div6--h3 {
+    margin-top: 36px !important;
+  }
+}
+@media (max-width: 1110px) {
+  .main__container--div6--section {
+    flex-direction: column;
+    margin: 0 auto;
+    margin-left: 0px !important;
+    align-items: center !important;
+  }
+  .game__container--score {
+    margin-left: 0px !important;
+    max-width: 200px !important;
+    margin-top: 36px;
+  }
 }
 body.dark-mode {
   background-color: #1e1e1e;
@@ -757,13 +773,13 @@ h1 {
   margin-bottom: 20px;
 }
 
-.game-container {
+.game__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
 }
-.game-container .main__container--div6--h3 {
+.game__container .main__container--div6--h3 {
   display: flex;
   justify-content: center;
   font-family: Montserrat Alternates;
@@ -777,28 +793,49 @@ h1 {
   margin-top: 36px;
   margin-bottom: 36px;
 }
-
-.choices {
+.game__container .main__container--div6--section {
   display: flex;
-  gap: 10px;
+  margin-left: 205px;
 }
-
-.choice-button {
+.game__container .main__container--div6--choices {
+  display: flex;
+  width: 256px;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: row;
+}
+.game__container .main__container--div6--choices .main__container--div6--choices--button {
   background-color: black;
   color: white;
   border: none;
-  border-radius: 8px;
-  width: 80px;
-  height: 80px;
+  border-radius: 20px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-size: 16px;
 }
-
-.choice-button:hover {
+.game__container .main__container--div6--choices .main__container--div6--choices--button:hover {
   background-color: #333;
+}
+.game__container .main__container--div6--button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  color: white;
+  background-color: #000000;
+  border-radius: 20px;
+  font-family: Montserrat Alternates;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
 
 .result {
@@ -814,11 +851,24 @@ h1 {
   color: red;
 }
 
-.score {
+#result4 {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+  margin-bottom: 36px;
+  font-family: Montserrat Alternates;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.63px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+
+.game__container--score {
   font-size: 18px;
-  position: absolute;
-  left: 775px;
-  bottom: 90px;
+  margin-left: 104px;
   max-width: 111px;
   font-family: Montserrat Alternates;
   font-size: 12px;

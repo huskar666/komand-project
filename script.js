@@ -165,7 +165,7 @@ dayNightContainer.addEventListener("click", () => {
     dayNightContainer.src = body.classList.contains("dark-mode") ? nightIcon : dayIcon;
 });
 const choices = ["rock", "scissors", "paper"];
-    const resultElement = document.getElementById("result");
+    const resultElement = document.getElementById("result4");
     const scoreElement = document.getElementById("score");
     const computerButton = document.getElementById("computer-choice");
 
@@ -173,7 +173,7 @@ const choices = ["rock", "scissors", "paper"];
     let computerScore = 0;
     let playerChoice = null;
 
-    document.querySelectorAll(".choice-button[data-choice]").forEach(button => {
+    document.querySelectorAll(".main__container--div6--choices--button[data-choice]").forEach(button => {
       button.addEventListener("click", () => {
         playerChoice = button.dataset.choice;
         resultElement.textContent = `Ви обрали: ${translateChoice(playerChoice)}.`;
@@ -191,14 +191,14 @@ const choices = ["rock", "scissors", "paper"];
 
       if (result === "win") {
         playerScore++;
-        resultElement.textContent = `Ви виграли раунд! Комп'ютер обрав ${translateChoice(computerChoice)}.`;
+        resultElement.textContent = `Ви виграли раунд!`;
         resultElement.className = "result win";
       } else if (result === "lose") {
         computerScore++;
-        resultElement.textContent = `Ви програли раунд. Комп'ютер обрав ${translateChoice(computerChoice)}.`;
+        resultElement.textContent = `Комп'ютер виграв раунд!`;
         resultElement.className = "result lose";
       } else {
-        resultElement.textContent = `Нічия! Комп'ютер також обрав ${translateChoice(computerChoice)}.`;
+        resultElement.textContent = `Нічия!`;
         resultElement.className = "result";
       }
 
